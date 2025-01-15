@@ -18,9 +18,6 @@ class Index extends Component
 
     public function delete(Product $product)
     {
-        if (!empty($product->image)) {
-            unlink($product->image);
-        }
         $productService = new ProductService();
         $productService->delete($product->id);
         $this->dispatch('refresh')->to(Count::class);

@@ -26,7 +26,7 @@ class ProductRepository implements ProductRepositoryInterface
     public function delete($id)
     {
         $product = Product::findOrFail($id);
-        if (!empty($product->image)) {
+        if (!empty($product->image) && file_exists($product->image)) {
             unlink($product->image);
         }
         $product->delete();
