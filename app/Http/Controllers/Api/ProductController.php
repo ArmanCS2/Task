@@ -65,7 +65,7 @@ class ProductController extends Controller
         return response([
             'message' => 'محصول با موفقیت ایجاد شد',
             'data' => new ProductResource($product)
-        ]);
+        ],200);
     }
 
     /**
@@ -120,7 +120,7 @@ class ProductController extends Controller
         return response([
             'message' => 'محصول با موفقیت ویرایش شد',
             'data' => new ProductResource($product)
-        ]);
+        ],200);
 
     }
 

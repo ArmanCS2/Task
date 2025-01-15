@@ -17,6 +17,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
+        $this->app->register(\L5Swagger\L5SwaggerServiceProvider::class);
+
         $this->app->bind(ProductRepositoryInterface::class, ProductRepository::class);
         $this->app->bind(ProductService::class, function ($app) {
             return new ProductService($app->make(ProductRepositoryInterface::class));

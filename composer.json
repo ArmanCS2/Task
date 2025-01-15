@@ -16,6 +16,7 @@
         "morilog/jalali": "^3.4"
     },
     "require-dev": {
+        "darkaonline/l5-swagger": "^8.6",
         "fakerphp/faker": "^1.9.1",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.18",
